@@ -14,13 +14,18 @@ pip install arch
 generalized autoregressive conditional heteroskedasticity (GARCH) model:
 https://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity
 
-# Methology
-First, randomly choose GARCH (1,1) parameters and use them to generate time series which will be treated as training data.
-Second, use some trick to transform GARCH parameters so that they are in the range (0,1).
-Third, construct the neural network model with the usage of convolution layers and LSTM. The output layer has three neurons and its activation function is sigmoid because the target variables are in the range (0,1).
-Fourth, train the model!
-fifth, generate test time series which will be used to test our training model as well as the maximum likelihood procedure.
-sixth, compare the mean-squared-error of each GARCH(1,1) parameters.
+# Method
+1. randomly choose GARCH (1,1) parameters and use them to generate time series which will be treated as training data.
+
+2. use some trick to transform GARCH parameters so that they are in the range (0,1).
+
+3. construct the neural network model with the usage of convolution layers and LSTM. The output layer has three neurons and its activation function is sigmoid because the target variables are in the range (0,1).
+
+4. train the model!
+
+5. generate test time series which will be used to test our training model as well as the maximum likelihood procedure.
+
+6. compare the mean-squared-error of each GARCH(1,1) parameters.
 
 # Outlook
 1. Consider the time series is sampled from the distribution beyond normal distribution, such as distribution with skewness or Student's t distribution
